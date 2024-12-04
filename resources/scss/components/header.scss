@@ -1,0 +1,14 @@
+.header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: .5rem 1rem;
+    position: fixed;
+    top: 0;
+
+    background: linear-gradient(180deg, rgba(15, 15, 15, 0.6) 0%, rgba(255,255,255,0) 100%);
+}

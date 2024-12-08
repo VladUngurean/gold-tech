@@ -29,4 +29,28 @@ class ReviewController extends Controller
 
         return redirect(route('review'));
     }
+
+    public function edit(Review $review) {
+        return view('panel/reviews/edit', ['review' => $review]);
+    }
+
+    public function update(Review $review, Request $request) {
+        $data = $request->validate([
+            'client_name' => 'required',
+            'review_post_date' => 'required',
+            'review_content' => 'required',
+            'project_name' => 'required',
+            'project_realisation_date' => 'required',
+        ]);
+
+        $review->update($data);
+
+        return redirect(route('review'));
+    }
+
+    public function delete(Review $review) {
+        $review->delete();
+
+        return redirect(route('review'));
+    }
 }

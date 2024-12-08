@@ -138,7 +138,7 @@
 
                 &-element {
                     display: grid;
-                    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+                    grid-template-columns: repeat(6,1fr);
                     justify-items: start;
                     align-items: center;
                     gap: 0.5rem;
